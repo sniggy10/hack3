@@ -94,5 +94,9 @@ router.get("/contact", function(req, res){
 router.get("/land", function(req, res){
     res.render("land.ejs")
 })
+router.get("/destination", function(req, res){
+    res.render("destination.ejs")
+})
+
 
 module.exports = router;

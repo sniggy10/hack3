@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const ejs = require('ejs');
 //const methodOverride = require("method-override")
 const app = express();
-const port = 3000;
+const port = 3005;
 // app.use(express.static(__dirname + '/views'));
 const users = require('./routes/users');
 
@@ -32,5 +32,5 @@ app.get('/', function(req, res){
 
 
 app.listen(port, function(){
-    console.log("SERVER INITIATED ON PORT 3000");
+    console.log("SERVER INITIATED ON PORT 3005");
 })
