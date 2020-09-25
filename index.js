@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const ejs = require('ejs');
 //const methodOverride = require("method-override")
 const app = express();
-const port = 3008;
+const port = 3007;
 // app.use(express.static(__dirname + '/views'));
 const users = require('./routes/users');
 const morgan=require('morgan')
@@ -24,14 +24,10 @@ mongoose.connect('mongodb://localhost/underdogs',function(err)
     }
 });
 
-
 app.set("view engine", "ejs");
 
-
-
-app.use(parser.json()); //should be written above below lines...parse json data
+app.use(parser.json()); //parse json data
 app.use(parser.urlencoded({extended:true}));
-// app.set('views','./views');
 //app.use(methodOverride("_method"));
 app.use(express.static('public'));
 app.use('*', function(req, res, next){ // to alllow cors error //mdn cors
@@ -39,10 +35,6 @@ app.use('*', function(req, res, next){ // to alllow cors error //mdn cors
     res.set('Access-Control-Allow-Headers','content-type'); //for chrome
     next();
 });
-
-
-
-
 
 app.use(require('express-session')({
     secret: "underDOG",
@@ -68,9 +60,6 @@ app.get('/', function(req, res){
     res.render("index");
 })
 
-
-
-
 app.listen(port, function(){
-    console.log("SERVER INITIATED ON PORT 3003");
+    console.log("SERVER INITIATED ON PORT 3007");
 })

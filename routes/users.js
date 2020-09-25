@@ -6,23 +6,6 @@ const app = express();
 const passport = require('passport');
 
 router.get('/destination',isLoggedIn,(req,res)=>{
-    //console.log(req.user);
-//     var novparts = new Array();
-//     var ob = {};
-//    Novels.find({'mainauthor.id': req.user._id},(err,novels)=>{
-//         if(err){
-//             console.log(err);
-//         }else{
-           
-//             Parts.find({'collabauthor.id' : req.user._id }, (err,parts)=>{
-//                 if(err){
-//                     console.log(err);
-//                 }else{
-                    
-//                     res.render('author/dashboard',{novels:novels, parts:parts }); 
-//                 }});
-//         }
-//    });
     res.render("destination.ejs")
 });
 
@@ -79,10 +62,6 @@ router.get("/error", function(req, res){
     res.render("error.ejs")
 })
 
-
-// router.get("/destination", function(req, res){
-//     res.render("destination.ejs")
-// })
 function isLoggedIn(req,res,next){
     // console.log(req.isAuthenticated());
      if(req.isAuthenticated()){
