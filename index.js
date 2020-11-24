@@ -7,6 +7,7 @@ const app = express();
 const port = 3007;
 // app.use(express.static(__dirname + '/views'));
 const users = require('./routes/users');
+const destination = require('./routes/destination');
 const morgan=require('morgan')
 const passport = require('passport');
 const localStrategy = require('passport-local');
@@ -55,6 +56,7 @@ app.use((req,res,next)=>{
 
 app.use(morgan('dev'));
 app.use('/', users);
+app.use('/destination',destination);
 
 app.get('/', function(req, res){
     res.render("index");

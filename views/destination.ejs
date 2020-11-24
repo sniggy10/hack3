@@ -1,3 +1,5 @@
+
+ 
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
@@ -11,29 +13,26 @@
     <title>Cardoor - Car Rental HTML Template</title>
 
     <!--=== Bootstrap CSS ===-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <!--=== Slicknav CSS ===-->
-    <link href="css/slicknav.min.css" rel="stylesheet">
+    <link href="/css/slicknav.min.css" rel="stylesheet">
     <!--=== Magnific Popup CSS ===-->
-    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="/css/magnific-popup.css" rel="stylesheet">
     <!--=== Owl Carousel CSS ===-->
-    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="/css/owl.carousel.min.css" rel="stylesheet">
     <!--=== Gijgo CSS ===-->
-    <link href="css/gijgo.css" rel="stylesheet">
+    <link href="/css/gijgo.css" rel="stylesheet">
     <!--=== FontAwesome CSS ===-->
-    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
     <!--=== Theme Reset CSS ===-->
-    <link href="css/reset.css" rel="stylesheet">
+    <link href="/css/reset.css" rel="stylesheet">
     <!--=== Main Style CSS ===-->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
     <!--=== Responsive CSS ===-->
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPzLdcKEPCe4SQf3-cdSnq5vmh_MRaHCs&libraries=places"></script>
 
 
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body class="loader-active">
@@ -104,39 +103,18 @@
                         <nav class="mainmenu alignright">
                             <ul>
                                 <li class="active"><a href="/">Home</a>
-                                    <!-- <ul>
-                                        <li><a href="index.html">Home 1</a></li>
-                                       
-                                    </ul> -->
+
                                 </li>
-                                <!-- <li><a href="about.html">About</a></li> -->
-                                <!-- <li><a href="services.html">services</a></li> -->
-                                <!-- <li><a href="#">Cars</a>
-                                    <ul>
-                                        <li><a href="car-left-sidebar.html">Car Left Sidebar</a></li>
-                                        <li><a href="car-right-sidebar.html">Car Right Sidebar</a></li>
-                                        <li><a href="car-without-sidebar.html">Car Without Sidebar</a></li>
-                                        <li><a href="car-details.html">Car Details</a></li>
-                                    </ul>
-                                </li> -->
+
                                 <li><a href="/">Pages</a>
                                     <ul>
-                                        <!-- <li><a href="package.html">Pricing</a></li>
-                                        <li><a href="driver.html">Driver</a></li> -->
-                                        
                                         <li><a href="/login">Log In</a></li>
                                         <li><a href="/register">Register</a></li>
                                         <li><a href="/destination">Book Now</a></li>
-                                        <li><a href="/logout" class="nav-item nav-link">Logout</a></li>
-                                        <!-- <li><a href="404.html">404</a></li> -->
+                                        <li><a href="/logout">Log Out</a></li>
                                     </ul>
                                 </li>
-                                <!-- <li><a href="#">Blog</a>
-                                    <ul>
-                                        <li><a href="article.html">Blog Page</a></li>
-                                        <li><a href="article-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li> -->
+
                                 <li><a href="/contact">Contact</a></li>
                             </ul>
                         </nav>
@@ -150,7 +128,7 @@
     <!--== Header Area End ==-->
 
     <!--== Page Title Area Start ==-->
-    <section id="page-title-area" class="section-padding overlay" style="height: 700px">
+    <section id="page-title-area" class="section-padding overlay" style="height:700px">
         <div class="container">
             <div class="row">
                 <!-- Page Title Start -->
@@ -165,49 +143,148 @@
             </div>
         </div>
     </section>
-    <!--== Page Title Area End ==-->
 
-    <!--== Login Page Content Start ==-->
-    <section id="login-page-wrap" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-8 m-auto">
-                	<div class="login-page-content">
-                		<div class="login-form">
-                			<!-- <h3>Welcome Back!</h3> -->
-							<form action="/" >
-								<div class="username">
-									<input type="text" placeholder="Email or Username">
-                                </div>
-                                <div class="password">
-									<input type="text" placeholder="Drop Location">
-                                </div>
-                                
-								
-								<div class="log-btn">
-									<button type="submit"><i class="fa fa-sign-in"></i>Book Now</button>
-								</div>
-							</form>
-                		</div>
-                		
-                		<div class="login-other">
-                			<span class="or">or</span>
-                			<a href="#" class="login-with-btn facebook"><i class="fa fa-facebook"></i> Login With Facebook</a>
-                			<a href="#" class="login-with-btn google"><i class="fa fa-google"></i> Login With Google</a>
-                		</div>
-                	
-                		<div class="login-menu">
-                			<!-- <a href="about.html">About</a> -->
-                			<span>|</span>
-                			<a href="/contact">Contact</a>
-                		</div>
-                	</div>
-                </div>
-        	</div>
+    <section class="info-cell">
+        <div class="submission-container">
+            <h2>Book your ride</h2>
+            <input id="name" type="text" placeholder="UserName">
+            <input type="text" id="drop" placeholder="Destination">
+            <button type="submit" class="btn-success" onclick="hit()" id="get">Get Ride</button>
+            <button class="btn-success" id="g"style="margin-top:10px">Double click to see your route!</button>
         </div>
-    </section>
-    <!--== Login Page Content End ==-->
 
+        <div class="card">
+            <h2>Your Ride</h2>
+            <h5 style="padding: 8px ;margin: 8px; background-color:rgb(255, 208, 0);border-bottom-color: rgb(85, 85, 85);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(85, 85, 85);
+border-left-style: solid;
+border-left-width: 1px;
+border-right-color: rgb(85, 85, 85);
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color: rgb(85, 85, 85);
+border-top-style: solid;
+border-top-width: 1px;font-size: 14px;
+font-stretch: 100%;
+font-style: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-weight: 400;text-align: left" id="dest">Your Destination: </h5>
+            <h5 style="padding: 8px ;margin: 8px; background-color:rgb(255, 208, 0);border-bottom-color: rgb(85, 85, 85);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(85, 85, 85);
+border-left-style: solid;
+border-left-width: 1px;
+border-right-color: rgb(85, 85, 85);
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color: rgb(85, 85, 85);
+border-top-style: solid;
+border-top-width: 1px;font-size: 14px;
+font-stretch: 100%;
+font-style: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-weight: 400;text-align: left" id="dist">Total Distance: </h5>
+            <h5 style="padding: 8px ;margin: 8px; background-color:rgb(255, 208, 0);border-bottom-color: rgb(85, 85, 85);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(85, 85, 85);
+border-left-style: solid;
+border-left-width: 1px;
+border-right-color: rgb(85, 85, 85);
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color: rgb(85, 85, 85);
+border-top-style: solid;
+border-top-width: 1px;font-size: 14px;
+font-stretch: 100%;
+font-style: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-weight: 400;text-align: left" id="time">Total Duration: </h5>
+            <h5 style="padding: 8px ;margin: 8px; background-color:rgb(255, 208, 0);border-bottom-color: rgb(85, 85, 85);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(85, 85, 85);
+border-left-style: solid;
+border-left-width: 1px;
+border-right-color: rgb(85, 85, 85);
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color: rgb(85, 85, 85);
+border-top-style: solid;
+border-top-width: 1px;font-size: 14px;
+font-stretch: 100%;
+font-style: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-weight: 400;text-align: left" id="share">Your Cab Share: </h5>
+            <h5 style="padding: 8px ;margin: 8px; background-color:rgb(255, 208, 0);border-bottom-color: rgb(85, 85, 85);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(85, 85, 85);
+border-left-style: solid;
+border-left-width: 1px;
+border-right-color: rgb(85, 85, 85);
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color: rgb(85, 85, 85);
+border-top-style: solid;
+border-top-width: 1px;font-size: 14px;
+font-stretch: 100%;
+font-style: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-weight: 400;text-align: left" id="partners">Partners: </h5>
+    </div>
+
+
+
+
+
+    </section>
+    <hr> 
+    <!--== Login Page Content End ==-->
+    <div id="map-canvas" style="height: 500px; width: 100%;align-self: center"></div>
     <!--== Footer Area Start ==-->
     <section id="footer-area">
         <!-- Footer Widget Start -->
@@ -221,14 +298,6 @@
                             <div class="widget-body">
                                 <img src="/images/logo.png" alt="JSOFT">
                                 <p>Welcome to the best carpool services in Bengaluru</p>
-
-                                <!-- <div class="newsletter-area">
-                                    <form action="index.html">
-                                        <input type="email" placeholder="Subscribe Our Newsletter">
-                                        <button type="submit" class="newsletter-btn"><i class="fa fa-send"></i></button>
-                                    </form>
-                                </div> -->
-
                             </div>
                         </div>
                     </div>
@@ -246,24 +315,7 @@
                                            <i class="fa fa-long-arrow-right"></i>
                                        </a>
                                     </li>
-                                    <!-- <li>
-                                        <a href="#">
-                                          Lorem ipsum dolor sit amet
-                                           <i class="fa fa-long-arrow-right"></i>
-                                       </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                           Hello Bangladesh! 
-                                           <i class="fa fa-long-arrow-right"></i>
-                                       </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            consectetur adipisicing elit?
-                                           <i class="fa fa-long-arrow-right"></i>
-                                       </a>
-                                    </li> -->
+
                                 </ul>
                             </div>
                         </div>
@@ -290,21 +342,7 @@
                 </div>
             </div>
         </div>
-        <!-- Footer Widget End -->
 
-        <!-- Footer Bottom Start -->
-        <!-- <div class="footer-bottom-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <p>
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-</p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Footer Bottom End -->
     </section>
     <!--== Footer Area End ==-->
 
@@ -345,6 +383,168 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!--=== Mian Js ===-->
     <script src="/scripts/main.js"></script>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 </body>
+<!-- rows[""0""].elements[""0""].distance -->
+<!-- rows[""0""].elements[""0""].distance -->
+<script>
+    const name=document.getElementById('name');
+    const drop=document.getElementById('drop');
+    
+    function hit() {
+        var username=name.value;
+        var dropLoc=drop.value;
+        //console.log(dropLoc);
+        //console.log(username);
+        var check=0;
+        
+        axios.post('/destination',{
+            username : username,
+            drop : dropLoc
+        })
+        .then(function(response){
+            if(response)
+            check=1;
+        })
+        .catch(function(err){
+            console.log(err);
+        });
+        
+        display();
+    }
+    function display() {
+        var pickup = 'kempagowda';
+        var dropLocataion= document.getElementById('drop').value;
+        var url1 = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=';
+        var url2 = '&destinations=';
+        var url3 = '&key=AIzaSyAPzLdcKEPCe4SQf3-cdSnq5vmh_MRaHCs';
+        var url4 = url1 + pickup + url2 + dropLocataion + url3;
+        //console.log(url4);
+        let o;
+        var xhr = new XMLHttpRequest;
+        xhr.addEventListener('load', function() {
+           
+            o = JSON.parse(this.responseText);
+            console.log("hi");
+            console.log(o);
+            document.getElementById('dist').innerText = "Total distance : " + o.rows["0"].elements["0"].distance.text;
+            console.log(o.rows["0"].elements["0"].distance.text);
+            document.getElementById('time').innerText = "Total duration : " + o.rows["0"].elements["0"].duration.text;
+            console.log(o.rows["0"].elements["0"].duration.text);
+            document.getElementById('dest').innerText = "Your Destination : " + document.getElementById('drop').value;
+        });
+        xhr.open('GET', "https://cors-anywhere.herokuapp.com/" + url4);
+        xhr.send();
+    }
+       
+       
+       setInterval(function(){
+       axios.get('/destination/sender')
+       .then(function(response){
+          //console.log(response);
+          var users=[];
+          var dropLoc=drop.value;
+          var count=0;
+          for(var i=0;i<response.data.length;i++){
+              if(response.data[i].drop==dropLoc){
+              users[count]=response.data[i].username;
+              count++;
+            }
+            }
+            var dist=document.getElementById('dist');
+            //console.log(dist.innerText);
+            var str=dist.innerText;
+           // console.log(str);
+            var part=str.split(" ");
+           // console.log(part[3]);
+            var miles=parseFloat(part[3]);
+            console.log(miles);
+            //console.log(count);
+            if(count!=0)
+            {
+             var cost= (40.0+(miles*25.0))/count;
+             document.getElementById('share').innerHTML="Your Cab Share :   "+cost;
+            }
+             console.log(users);
+             document.getElementById('partners').innerText="Cab Riders : ";
+             var string="";
+            for(var i=0;i<count;i++){
+                string=string+"  "+users[i];
+            }
+            document.getElementById('partners').innerText+=string;
+            
+       })
+       .catch(function(err){
+           console.log(err);
+       });
+   },1000);
+    
+    
+    var button = document.getElementById('g');
+// var geocoder = new google.maps.Geocoder();
+ //var address = document.getElementById('drop');
+function mapLocation() {
+var latitude; var longitude;
+function showResult(result) {
+ latitude = result.geometry.location.lat();
+ longitude= result.geometry.location.lng();
+ console.log(latitude);console.log(longitude);
+}
+function getLatitudeLongitude(callback, address) {
+ geocoder = new google.maps.Geocoder();
+ if (geocoder) {
+     geocoder.geocode({
+         'address': address
+     }, function (results, status) {
+         if (status == google.maps.GeocoderStatus.OK) {
+             callback(results[0]);
+             
+         }
+     });
+ }
+}
+button.addEventListener("click", function () {
+ var address = document.getElementById('drop').value;
+ getLatitudeLongitude(showResult, address)
+});
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+function initialize() {
+ directionsDisplay = new google.maps.DirectionsRenderer();
+ var chicago = new google.maps.LatLng(13.192665896, 77.70333052);
+ var mapOptions = {
+   zoom: 7,
+   center: chicago
+ };
+ map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+ directionsDisplay.setMap(map);
+ google.maps.event.addDomListener(document.getElementById('g'), 'click', calcRoute);
+}
+function calcRoute() {
+ var start = new google.maps.LatLng(13.192665896, 77.70333052);
+ //var end = new google.maps.LatLng(38.334818, -181.884886);
+ var end = new google.maps.LatLng(latitude, longitude);
+ var request = {
+   origin: start,
+   destination: end,
+   travelMode: google.maps.TravelMode.DRIVING
+ };
+ directionsService.route(request, function(response, status) {
+   if (status == google.maps.DirectionsStatus.OK) {
+     directionsDisplay.setDirections(response);
+     directionsDisplay.setMap(map);
+   } else {
+     // alert("Directions Request from " + start.toUrlValue(6) + " to " + end.toUrlValue(6) + " failed: " + status);
+   }
+ });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+}
+mapLocation();
+</script>
 
 </html>
+
+
